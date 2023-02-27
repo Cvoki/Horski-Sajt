@@ -1,0 +1,29 @@
+footer{
+    bottom: 0;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    margin:center;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: gold;
+    color: red;
+  }
+  .fa-instagram{
+    background:gold;
+    color: red;
+  }
+  .fa-email{
+    background:gold;
+    color: red;
+  }
+  .fa-youtube{
+    background:gold;
+    color: red;
+  }
