@@ -1,3 +1,82 @@
+* {
+    box-sizing: border-box;
+  }
+body{
+    background: red;  
+    font-size: 1rem;  
+}
+.navigacioni-meni{
+    background-color: red;
+    opacity: 0.9;
+    padding:5px;
+    padding-top:50px;
+    font-size: 2vw;
+    color:gold;
+    width:30vw;
+    height: 100vh;
+    position:fixed;
+    z-index:1;
+    top:0px;
+    right:0px;
+    display:none;
+}
+.navigacioni-meni ul{
+    list-style-type: none;
+    margin-top: 50px;
+}
+.navigacioni-meni li a{
+    text-decoration: none;
+    color:gold;
+}
+.navigacioni-meni li:hover{
+    opacity:0.7;
+    cursor: pointer;
+    text-decoration: none;
+}
+a {
+    color:#c7a658;
+  }
+  
+  a.nav-link:hover{
+    color: #c7a658;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .icon:hover{
+    fill: #c7a658;
+  }
+  
+  .navbar .navbar-toggler:focus {
+    color: white;
+  }
+  
+  .navbar .navbar-toggler{
+    filter: invert(100%)
+  }
+  
+  
+  a:hover{
+    text-decoration: underline;
+    transition: all .3s ease;
+    color:#c7a658;
+  
+  }
+  
+  .navbar a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  li {
+    margin-right: 30px;
+  }
+
 footer{
     bottom: 0;
 }
