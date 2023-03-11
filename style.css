@@ -2,38 +2,11 @@
     box-sizing: border-box;
   }
 body{
-    background: red;  
+    background:#DCDCDC;
     font-size: 1rem;  
 }
-.navigacioni-meni{
-    background-color: red;
-    opacity: 0.9;
-    padding:5px;
-    padding-top:50px;
-    font-size: 2vw;
-    color:gold;
-    width:30vw;
-    height: 100vh;
-    position:fixed;
-    z-index:1;
-    top:0px;
-    right:0px;
-    display:none;
-}
-.navigacioni-meni ul{
-    list-style-type: none;
-    margin-top: 50px;
-}
-.navigacioni-meni li a{
-    text-decoration: none;
-    color:gold;
-}
-.navigacioni-meni li:hover{
-    opacity:0.7;
-    cursor: pointer;
-    text-decoration: none;
-}
-a {
+
+a.nav-link {
     color:#c7a658;
   }
   
@@ -58,7 +31,24 @@ a {
   .navbar .navbar-toggler{
     filter: invert(100%)
   }
+
+  .navbar a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .nav-item {
+    margin: 0 5px; /* reduce the margin */
+  }
   
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -5px; /* reduce the margin */
+  }
   
   a:hover{
     text-decoration: underline;
@@ -72,39 +62,30 @@ a {
     text-align: center;
     text-decoration: none;
   }
-  
-  li {
-    margin-right: 30px;
-  }
+
+  span {
+    display: table;
+    margin: 0 auto;
+}
 
 footer{
     bottom: 0;
+    color:#fcb045;
+    background-color: #af1d1c;
 }
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
   
   .fa:hover {
     opacity: 0.7;
   }
   .fa-facebook {
-    background: gold;
-    color: red;
+    color: #fcb045;
   }
   .fa-instagram{
-    background:gold;
-    color: red;
+    color: #fcb045;
   }
   .fa-email{
-    background:gold;
-    color: red;
+    color:#fcb045;
   }
   .fa-youtube{
-    background:gold;
-    color: red;
+    color: #fcb045;
   }
