@@ -7,7 +7,7 @@ body{
 }
 
 a.nav-link {
-    color:#c7a658;
+    color:white;
   }
   
   a.nav-link:hover{
@@ -70,22 +70,7 @@ a.nav-link {
 
 footer{
     bottom: 0;
-    color:#fcb045;
+    color:white;
     background-color: #af1d1c;
 }
-  
-  .fa:hover {
-    opacity: 0.7;
-  }
-  .fa-facebook {
-    color: #fcb045;
-  }
-  .fa-instagram{
-    color: #fcb045;
-  }
-  .fa-email{
-    color:#fcb045;
-  }
-  .fa-youtube{
-    color: #fcb045;
-  }
+   /* color:#fcb045;*/
