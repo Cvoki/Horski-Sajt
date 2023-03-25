@@ -56,58 +56,66 @@
     <!--Stranica o njoj -->   
     
     <section>
-        <div class="col-lg-8 offset-lg-2 content-page">
-            <div class="breadcrumbs">
-                    <span>
+            <ul class="breadcrumb">
+                    <li>
                         <a href="index.html">Почетна страница</a>
-                        <span class="separator">>></span>
-                        <strong class="breadcrumb_last" aria-current="page">Контакт</strong>
-                    </span>
-            </div>
-        </div>
-<div class="row mb-5 pt-5">
-        <div class="col-md-6 col-lg-6">
-            <div class="card card-body p-4 pt-5">
-                <h1>Контакт</h1>
-                <div>
-                   <h5>Можете нас контактирати на:</h5>
-                    <p><strong>Број телефона:</strong> 022 328 369<br><strong>Е-пошта:</strong> hor.svetivladikanikolaj.np@gmail.com</p>
-                    
-                </div>
-                <form>
-                    <div class="form-group">
-                        <label>Име:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Наслов поруке:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>е-пошта:</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Порука:</label>
-                        <textarea id="textarea" class="form-control"></textarea>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Пошаљи</button>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-6">
-            <div class="card card-body p-4 pt-5">
-                <h1>Локација</h1>
-                <p>Храм Свете Петке
-                    <br>Адреса: <br><b>Цара Душана 13,Нова Пазова</b>
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.98689496408616!2d20.217577209801593!3d44.94579918510984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a5f858b1216bb%3A0x70c71635ec50c3a6!2z0KbRgNC60LLQsCDQv9GA0LXQv9C-0LTQvtCx0L3QtSDQvNCw0YLQuCDQn9Cw0YDQsNGB0LrQtdCy0LU!5e0!3m2!1shr!2srs!4v1665228953404!5m2!1shr!2srs"
+                    </li>
+                    <li>
+                        <a href="index.html"><b>Контакт</b></a>
+                    </li>
+                </ul>
+        <div class="iframe-rwd">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352.98689496408616!2d20.217577209801593!3d44.94579918510984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a5f858b1216bb%3A0x70c71635ec50c3a6!2z0KbRgNC60LLQsCDQv9GA0LXQv9C-0LTQvtCx0L3QtSDQvNCw0YLQuCDQn9Cw0YDQsNGB0LrQtdCy0LU!5e0!3m2!1shr!2srs!4v1665228953404!5m2!1shr!2srs"
                 style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+
         </div>
-    
-</div>
+    <div id="container">
+        <div class="underline"></div>  
+        <div class="col-md-6 col-lg-10" style="margin: auto;">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1>Контакт</h1>
+                        <h5>Можете нас контактирати на:</h5>
+                        <p><strong>Број телефона:</strong> 022 328 369<br><strong>Е-пошта:</strong> hor.svetivladikanikolaj.np@gmail.com</p>
+                     </div>
+                </div>
+                    <div class="col">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="name"></label>
+                                        <input type="text" class="form-control" placeholder="Име" required>
+                                    </div>
+                                </div>
+                                <div div class="col">
+                                    <div class="form-group">
+                                        <label for="surname"></label>
+                                        <input type="text" class="form-control" placeholder="Презиме" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reason"></label>
+                                <input type="text" class="form-control" placeholder="Наслов" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="email" class="form-control" placeholder="Е-пошта" required>
+                            </div><br>
+                            <div class="form-group">
+                                <label for="message"></label>
+                                <textarea name="message" id="message_input" class="form-control" placeholder="Порука" required></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" id="form_button" class="btn btn-primary">Пошаљи</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
 </section>
 
  <!--Footer-->
