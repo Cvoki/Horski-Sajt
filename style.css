@@ -6,6 +6,10 @@ body{
     font-size: 1rem;  
 }
 
+.kontakt{
+  font-size: 18px;
+}
+
 a.nav-link {
     color:white;
   }
@@ -215,13 +219,13 @@ ul.breadcrumb li+li:before {
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #0275d8;
+  color: #af1d1c;
   text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
-  color: #01447e;
+  color: #c7a658;
   text-decoration: underline;
 } 
 
