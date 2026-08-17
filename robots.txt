@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cvoki.github.io/Horski-Sajt/sitemap.xml
