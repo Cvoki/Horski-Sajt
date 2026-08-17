@@ -10,6 +10,8 @@ Website for the mixed choir at the Church of St. Petka in Nova Pazova, Serbia. S
 
 **Instagram:** [@hornovapazova](https://www.instagram.com/hornovapazova) · **Facebook:** [HorNovaPazova](https://www.facebook.com/HorNovaPazova) · **YouTube:** [choir channel](https://www.youtube.com/channel/UCHeA3i_Rdq_KfHwoMIjTJKg)
 
+**Live site:** [cvoki.github.io/Horski-Sajt](https://cvoki.github.io/Horski-Sajt/)
+
 ---
 
 ## About the project
@@ -33,9 +35,9 @@ All content is in **Serbian Cyrillic**, which for a site like this isn't a techn
 
 ## Built with
 
-`HTML5` · `CSS3` · `Bootstrap 5.2` · `Font Awesome` · `Instagram Embed`
+`HTML5` · `CSS3` · `Bootstrap 5.0` · `Bootstrap Icons` · `Instagram Embed` · `formsubmit.co` · `GitHub Pages`
 
-Libraries load from a CDN, so the repository holds only what was written for this site.
+Libraries load from a CDN, so the repository holds only what was written for this site. The contact form submits through [formsubmit.co](https://formsubmit.co) — no account needed, messages go straight to the choir's email.
 
 ## Structure
 
@@ -47,8 +49,11 @@ Libraries load from a CDN, so the repository holds only what was written for thi
 ├── galerija.html       # gallery (Instagram)
 ├── crkva.html          # about the church
 ├── kontakt.html        # contact and map
+├── 404.html            # page for missing routes
+├── robots.txt          # search engine instructions
+├── sitemap.xml         # sitemap for search engines
 ├── style.css           # all styles
-└── slike/              # social media icons (SVG)
+└── slike/              # favicon.svg and social media icons
 ```
 
 ## Design
@@ -88,11 +93,12 @@ python3 -m http.server 8000
 
 ## What's left to do
 
-The site was set up as a foundation and has room to grow:
+The basic frame and content are done, and the site is live on GitHub Pages. What remains:
 
-- The contact form is presentational — static hosting can't receive submissions on its own. It would work through a service like Formspree, or by moving to Netlify Forms.
-- `index.html` and `dogadjaji.html` still have only the frame, not the main content.
-- Instead of Instagram embeds, the gallery could use its own photographs — faster to load and not dependent on a third party.
+- **Real photographs** of the choir, the church and performances — none are in the repository yet (`crkva.html` has marked spots waiting for them).
+- **Real dates and locations** for performances on `dogadjaji.html` — currently just placeholder cards.
+- **A real logo/favicon** for the choir — a temporary one (`slike/favicon.svg`) in the site's colours is in place for now.
+- (optional) The gallery still uses Instagram embeds; switching to its own photographs remains an option for later — faster to load and not dependent on a third party.
 
 ## License
 
