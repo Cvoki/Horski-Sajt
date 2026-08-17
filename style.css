@@ -10,6 +10,35 @@ body{
   font-size: 18px;
 }
 
+.text-gold {
+  color: #c7a658;
+}
+
+.paragraf {
+  margin: 0;
+}
+
+.content-page {
+  background: white;
+}
+
+.page-header {
+  margin-bottom: 1rem;
+}
+
+.center {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: #c7a658;
+  margin: 0.5rem auto 1.5rem;
+}
+
 a.nav-link {
     color:white;
   }
@@ -129,15 +158,6 @@ form {
   margin: 50px 0;
 }
 
-.message {
-	float: none;
-}
-
-.name {
-	float: left;
-	width: 45%;
-}
-
 textarea {
 	line-height: 150%;
 	height: 150px;
@@ -231,8 +251,16 @@ ul.breadcrumb li a:hover {
 
 
 footer{
-    bottom: 0;
     color:white;
     background-color: #af1d1c;
 }
-   /* color:#fcb045;*/
+
+@media (max-width: 767px) {
+  .nav-item {
+    margin: 0 15px;
+  }
+
+  #container {
+    margin: 30px auto;
+  }
+}
