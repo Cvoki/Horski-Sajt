@@ -1,0 +1,668 @@
+:root {
+  --color-red: #af1d1c;
+  --color-red-dark: #7d1514;
+  --color-gold: #c7a658;
+  --color-gold-light: #e4d3ab;
+  --color-bg: #f3f1ec;
+  --color-surface: #ffffff;
+  --color-ink: #3a3735;
+  --color-ink-soft: #6b6763;
+  --color-border: #e7e2d8;
+
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "PT Sans", "Segoe UI", Tahoma, sans-serif;
+
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --shadow-card: 0 4px 18px rgba(58, 55, 53, 0.09);
+  --shadow-card-hover: 0 10px 28px rgba(58, 55, 53, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+}
+
+.kontakt {
+  font-size: 18px;
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.paragraf {
+  margin: 0;
+}
+
+.content-page {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1.5rem;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 0.5rem auto 1.5rem;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+
+.icon:hover {
+  fill: var(--color-gold);
+}
+
+/* ---------- Header / navigacija ---------- */
+
+.site-header {
+  background: linear-gradient(120deg, var(--color-red) 0%, var(--color-red-dark) 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-toggler:focus {
+  color: white;
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler {
+  filter: invert(100%);
+  border: none;
+}
+
+.navbar a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 0 28px;
+}
+
+.nav-item.active .nav-link {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -5px;
+}
+
+a.nav-link {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+a.nav-link:hover {
+  color: var(--color-gold);
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  color: var(--color-gold);
+}
+
+span {
+  display: table;
+  margin: 0 auto;
+}
+
+/* ---------- Forme ---------- */
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: var(--color-ink);
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.iframe-rwd {
+  position: relative;
+  padding-bottom: 40.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.iframe-rwd iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  margin: 60px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
+input[type=text], input[type=email], textarea {
+  border: none;
+  border-bottom: solid 2px var(--color-gold);
+  color: var(--color-ink);
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+  outline: none;
+  padding: 0 0 0.875em 0;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px var(--color-gold);
+  color: var(--color-red);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.9em;
+  font-weight: bold;
+  outline: none;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+/* ---------- Breadcrumb ---------- */
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 15px;
+  color: var(--color-ink-soft);
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: var(--color-ink-soft);
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* ---------- Hero (naslovna) ---------- */
+
+.hero {
+  position: relative;
+  background: radial-gradient(circle at 20% 20%, var(--color-red) 0%, var(--color-red-dark) 65%);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 4rem 2rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23c7a658' stroke-width='1' opacity='0.18'%3E%3Cpath d='M60 10 L60 110 M20 40 L100 40'/%3E%3Ccircle cx='60' cy='60' r='45'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.hero .underline {
+  background-color: var(--color-gold);
+}
+
+.hero p {
+  color: #f4ece0;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Dugmad ---------- */
+
+.btn-outline-dark {
+  border-color: var(--color-red);
+  color: var(--color-red);
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-red);
+  border-color: var(--color-red);
+}
+
+/* ---------- Naredni dogadjaj / info trake ---------- */
+
+.info-strip {
+  border-left: 4px solid var(--color-gold);
+}
+
+/* ---------- Kartice dogadjaja ---------- */
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.event-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.event-card-date {
+  flex: 0 0 72px;
+  background: var(--color-red);
+  color: #fff;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+}
+
+.event-card-day {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-card-month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-card-year {
+  font-size: 0.7rem;
+  color: var(--color-gold-light);
+}
+
+.event-card-body h5 {
+  margin-bottom: 0.35rem;
+}
+
+.event-card-body p {
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.event-card-time {
+  color: var(--color-ink-soft);
+}
+
+/* ---------- Kalendar ---------- */
+
+.calendar-wrap {
+  margin-top: 1rem;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.calendar-nav button {
+  border: solid 2px var(--color-gold);
+  background: transparent;
+  color: var(--color-red);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calendar-nav button:hover:not(:disabled) {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.calendar-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.calendar-month {
+  display: none;
+}
+
+.calendar-month.active {
+  display: block;
+}
+
+.calendar-caption {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.cal-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+.cal-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--color-bg);
+  font-size: 0.85rem;
+}
+
+.cal-cell.empty {
+  background: transparent;
+}
+
+.cal-cell.has-event {
+  background: var(--color-red);
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+}
+
+.cal-dot {
+  position: absolute;
+  bottom: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+/* ---------- Vesti kartice ---------- */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.news-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.news-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-card-image {
+  aspect-ratio: 16 / 10;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-gold-light);
+}
+
+.news-card-body {
+  padding: 1.1rem;
+}
+
+.news-card-date {
+  font-size: 0.8rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.news-card-body h5 {
+  margin: 0.35rem 0;
+}
+
+.news-card-more {
+  font-size: 0.85rem;
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.vest-cover {
+  aspect-ratio: 16 / 7;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.vest-date {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ---------- Placeholder za slike (dok stvarne slike ne budu dodate) ---------- */
+
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-bg));
+  color: var(--color-gold);
+}
+
+/* ---------- Galerija ---------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-gold-light);
+  box-shadow: var(--shadow-card);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  gap: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  color: white;
+  background: linear-gradient(120deg, var(--color-red) 0%, var(--color-red-dark) 100%);
+  border-top: none !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 767px) {
+  .nav-item {
+    margin: 0 15px;
+  }
+
+  #container {
+    margin: 30px auto;
+  }
+
+  .hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    letter-spacing: 1.5px;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-card-date {
+    flex-direction: row;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .calendar-grid {
+    max-width: 100%;
+  }
+}

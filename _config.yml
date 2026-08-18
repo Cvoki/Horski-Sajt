@@ -1,0 +1,61 @@
+title: "Хор Свети Владика Николај — Нова Пазова"
+description: "Хор „Свети Владика Николај Српски” при храму Свете Петке у Новој Пазови — вести, догађаји, галерија и контакт."
+url: "https://cvoki.github.io"
+baseurl: "/Horski-Sajt"
+lang: sr
+theme_color: "#af1d1c"
+logo: "/assets/img/icons/favicon.svg"
+
+author:
+  name: "Хор Свети Владика Николај"
+  email: hor.svetivladikanikolaj.np@gmail.com
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+collections:
+  vesti:
+    output: true
+    permalink: /vesti/:year/:month/:day/:title/
+  dogadjaji:
+    output: false
+  galerija:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "vesti"
+    values:
+      layout: "vest"
+  - scope:
+      path: ""
+      type: "dogadjaji"
+    values:
+      layout: "none"
+  - scope:
+      path: ""
+      type: "galerija"
+    values:
+      layout: "none"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  collections:
+    vesti:
+      path: /vesti/feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README.en.md
+  - node_modules
+  - vendor
+  - "*.gemspec"

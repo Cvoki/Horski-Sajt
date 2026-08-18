@@ -1,0 +1,19 @@
+<header class="site-header w-100">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand d-lg-none" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-md-flex d-block flex-row mx-md-auto mx-0">
+                    {% for item in site.data.nav %}
+                    <li class="nav-item{% if page.url == item.url %} active{% endif %}">
+                        <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
