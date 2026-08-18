@@ -4,7 +4,7 @@
 
 </div>
 
-# Choir "St. Bishop Nikolaj of Serbia" — Nova Pazova
+# Choir "St. Bishop Nikolaj of Serbia" - Nova Pazova
 
 Website for the mixed choir at the Church of St. Petka in Nova Pazova, Serbia. Static pages in Serbian Cyrillic, with no server and no content management system.
 
@@ -18,7 +18,7 @@ Website for the mixed choir at the Church of St. Petka in Nova Pazova, Serbia. S
 
 The choir was founded in 2005 with the blessing of Bishop Vasilije of Srem, and today has 24 members. The site was meant to gather in one place what had been scattered across social media: who they are, what they sing, where they perform and how to reach them.
 
-The solution is deliberately modest — static HTML, a single stylesheet and Bootstrap. No database, no admin panel, no monthly costs. The choir had nobody to maintain a system, so it's better not to have one.
+The solution is deliberately modest - static HTML, a single stylesheet and Bootstrap. No database, no admin panel, no monthly costs. The choir had nobody to maintain a system, so it's better not to have one.
 
 All content is in **Serbian Cyrillic**, which for a site like this isn't a technical detail but part of its character.
 
@@ -26,10 +26,10 @@ All content is in **Serbian Cyrillic**, which for a site like this isn't a techn
 
 | Page | Content |
 |---|---|
-| `index.html` | Home — header, navigation, footer |
+| `index.html` | Home - header, navigation, footer |
 | `o_nama.html` | About the choir: founding in 2005, members, repertoire |
 | `dogadjaji.html` | Events and performances |
-| `galerija.html` | Gallery — nine embedded Instagram posts |
+| `galerija.html` | Gallery - nine embedded Instagram posts |
 | `crkva.html` | About the church of St. Petka: history of Nova Pazova, construction, life of the saint |
 | `kontakt.html` | Contact form and a Google Map with the church location |
 
@@ -37,7 +37,7 @@ All content is in **Serbian Cyrillic**, which for a site like this isn't a techn
 
 `HTML5` · `CSS3` · `Bootstrap 5.0` · `Bootstrap Icons` · `Instagram Embed` · `formsubmit.co` · `GitHub Pages`
 
-Libraries load from a CDN, so the repository holds only what was written for this site. The contact form submits through [formsubmit.co](https://formsubmit.co) — no account needed, messages go straight to the choir's email.
+Libraries load from a CDN, so the repository holds only what was written for this site. The contact form submits through [formsubmit.co](https://formsubmit.co) - no account needed, messages go straight to the choir's email.
 
 ## Structure
 
@@ -86,19 +86,19 @@ python3 -m http.server 8000
 
 ## Editing content
 
-- **New page** — easiest to copy `o_nama.html` and replace the content, since it already carries the header, navigation and footer.
-- **Navigation** — repeated in every page's header, so a new item needs adding everywhere.
-- **Gallery** — embedded Instagram posts; add one by choosing *Embed* on Instagram and pasting the code into `galerija.html`.
-- **Styling** — all in `style.css`; Bootstrap classes handle the grid and layout.
+- **New page** - easiest to copy `o_nama.html` and replace the content, since it already carries the header, navigation and footer.
+- **Navigation** - repeated in every page's header, so a new item needs adding everywhere.
+- **Gallery** - embedded Instagram posts; add one by choosing *Embed* on Instagram and pasting the code into `galerija.html`.
+- **Styling** - all in `style.css`; Bootstrap classes handle the grid and layout.
 
 ## What's left to do
 
 The basic frame and content are done, and the site is live on GitHub Pages. What remains:
 
-- **Real photographs** of the choir, the church and performances — none are in the repository yet (`crkva.html` has marked spots waiting for them).
-- **Real dates and locations** for performances on `dogadjaji.html` — currently just placeholder cards.
-- **A real logo/favicon** for the choir — a temporary one (`slike/favicon.svg`) in the site's colours is in place for now.
-- (optional) The gallery still uses Instagram embeds; switching to its own photographs remains an option for later — faster to load and not dependent on a third party.
+- **Real photographs** of the choir, the church and performances - none are in the repository yet (`crkva.html` has marked spots waiting for them).
+- **Real dates and locations** for performances on `dogadjaji.html` - currently just placeholder cards.
+- **A real logo/favicon** for the choir - a temporary one (`slike/favicon.svg`) in the site's colours is in place for now.
+- (optional) The gallery still uses Instagram embeds; switching to its own photographs remains an option for later - faster to load and not dependent on a third party.
 
 ## License
 
@@ -106,4 +106,4 @@ The code is free to use and learn from. **Texts, photographs and content belong 
 
 ---
 
-<sub>Built by <a href="https://github.com/Cvoki">Luka Cvoro</a> — <a href="mailto:lukac95@gmail.com">lukac95@gmail.com</a></sub>
+<sub>Built by <a href="https://github.com/Cvoki">Luka Cvoro</a> - <a href="mailto:lukac95@gmail.com">lukac95@gmail.com</a></sub>
