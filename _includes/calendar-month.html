@@ -1,0 +1,62 @@
+{% assign month_key = include.month_key %}
+{% assign is_active = include.active %}
+{% assign parts = month_key | split: "-" %}
+{% assign year = parts[0] %}
+{% assign month = parts[1] %}
+{% assign year_int = year | plus: 0 %}
+{% assign days_in_month = site.data.dani_u_mesecu[month] %}
+{% if month == "02" %}
+  {% assign year_mod4 = year_int | modulo: 4 %}
+  {% assign year_mod100 = year_int | modulo: 100 %}
+  {% assign year_mod400 = year_int | modulo: 400 %}
+  {% assign is_leap = false %}
+  {% if year_mod4 == 0 %}
+    {% assign is_leap = true %}
+    {% if year_mod100 == 0 and year_mod400 != 0 %}
+      {% assign is_leap = false %}
+    {% endif %}
+  {% endif %}
+  {% if is_leap %}{% assign days_in_month = 29 %}{% endif %}
+{% endif %}
+{% assign first_day_str = month_key | append: "-01" %}
+{% assign first_weekday = first_day_str | date: "%u" %}
+{% assign leading_blanks = first_weekday | minus: 1 %}
+
+<div class="calendar-month{% if is_active %} active{% endif %}" data-month="{{ month_key }}">
+    <div class="calendar-caption">{{ site.data.meseci_nominativ[month] }} {{ year }}.</div>
+    <div class="calendar-grid" role="grid" aria-label="Календар — {{ site.data.meseci_nominativ[month] }} {{ year }}">
+        <div class="cal-weekday">Пон</div>
+        <div class="cal-weekday">Уто</div>
+        <div class="cal-weekday">Сре</div>
+        <div class="cal-weekday">Чет</div>
+        <div class="cal-weekday">Пет</div>
+        <div class="cal-weekday">Суб</div>
+        <div class="cal-weekday">Нед</div>
+        {% if leading_blanks > 0 %}
+        {% for i in (1..leading_blanks) %}<div class="cal-cell empty"></div>{% endfor %}
+        {% endif %}
+        {% for day in (1..days_in_month) %}
+        {% capture day_str %}{{ day }}{% endcapture %}
+        {% assign has_event = false %}
+        {% assign event_titles = "" %}
+        {% for e in include.events %}
+            {% assign e_month = e.date | date: "%Y-%m" %}
+            {% if e_month == month_key %}
+                {% assign e_day = e.date | date: "%-d" %}
+                {% if e_day == day_str %}
+                    {% assign has_event = true %}
+                    {% if event_titles == "" %}
+                        {% assign event_titles = e.title %}
+                    {% else %}
+                        {% assign event_titles = event_titles | append: "; " | append: e.title %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        <div class="cal-cell{% if has_event %} has-event{% endif %}"{% if has_event %} title="{{ event_titles }}"{% endif %}>
+            <span class="cal-day-num">{{ day }}</span>
+            {% if has_event %}<span class="cal-dot" aria-hidden="true"></span>{% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

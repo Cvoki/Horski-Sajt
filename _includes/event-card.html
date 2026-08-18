@@ -1,0 +1,17 @@
+{% assign event = include.event %}
+{% assign m = event.date | date: "%m" %}
+{% assign d = event.date | date: "%-d" %}
+{% assign y = event.date | date: "%Y" %}
+<div class="event-card">
+    <div class="event-card-date">
+        <span class="event-card-day">{{ d }}</span>
+        <span class="event-card-month">{{ site.data.meseci[m] }}</span>
+        <span class="event-card-year">{{ y }}.</span>
+    </div>
+    <div class="event-card-body">
+        <h5>{{ event.title }}</h5>
+        {% if event.time %}<p class="event-card-time">🕑 {{ event.time }}</p>{% endif %}
+        <p class="event-card-location"><strong>Место:</strong> {{ event.location }}</p>
+        {% if event.description %}<p class="event-card-desc">{{ event.description }}</p>{% endif %}
+    </div>
+</div>

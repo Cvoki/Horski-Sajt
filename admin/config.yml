@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: Cvoki/Horski-Sajt
+  branch: main
+  # TODO: kada OAuth worker bude deployovan (vidi README), upisati njegov URL ovde:
+  base_url: https://REPLACE-ME.workers.dev
+
+# Omogućava testiranje admin panela lokalno preko `npx decap-server`,
+# bez potrebe za GitHub OAuth worker-om. U produkciji je ovo bezopasan no-op.
+local_backend: true
+
+media_folder: "assets/img/uploads"
+public_folder: "/Horski-Sajt/assets/img/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "vesti"
+    label: "Вести"
+    label_singular: "Вест"
+    folder: "_vesti"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Наслов", name: "title", widget: "string" }
+      - { label: "Датум", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm" }
+      - { label: "Насловна слика", name: "cover_image", widget: "image", required: false }
+      - { label: "Кратак опис (за листу вести)", name: "excerpt", widget: "text", required: false }
+      - { label: "Садржај", name: "body", widget: "markdown" }
+
+  - name: "dogadjaji"
+    label: "Догађаји (календар наступа)"
+    label_singular: "Догађај"
+    folder: "_dogadjaji"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Наслов", name: "title", widget: "string" }
+      - { label: "Датум", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Време (опционо)", name: "time", widget: "string", required: false, hint: "нпр. 18:00" }
+      - { label: "Место", name: "location", widget: "string" }
+      - { label: "Опис (опционо)", name: "description", widget: "text", required: false }
+
+  - name: "galerija"
+    label: "Галерија"
+    label_singular: "Фотографија"
+    folder: "_galerija"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Слика", name: "image", widget: "image" }
+      - { label: "Опис (alt текст)", name: "caption", widget: "string", required: false }
+
+  - name: "site_settings"
+    label: "Подешавања сајта"
+    files:
+      - name: "general"
+        label: "Општа подешавања"
+        file: "_data/site_settings.yml"
+        fields:
+          - { label: "Телефон", name: "phone", widget: "string" }
+          - { label: "Е-пошта", name: "email", widget: "string" }
+          - { label: "Адреса", name: "address", widget: "string" }
+          - { label: "Инстаграм линк", name: "instagram_url", widget: "string" }
+          - { label: "Фејсбук линк", name: "facebook_url", widget: "string" }
+          - { label: "Јутјуб линк", name: "youtube_url", widget: "string" }
+          - { label: "Ручна порука за 'Наредни догађај' на насловној (опционо)", name: "next_event_override", widget: "text", required: false }

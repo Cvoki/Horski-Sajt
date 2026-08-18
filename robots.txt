@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://cvoki.github.io/Horski-Sajt/sitemap.xml
