@@ -27,6 +27,18 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -630,9 +642,19 @@ footer.site-footer {
   color: white;
   background: linear-gradient(120deg, var(--color-red) 0%, var(--color-red-dark) 100%);
   border-top: none !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  row-gap: 0.75rem;
 }
 
 /* ---------- Responsive ---------- */
+
+/* Tableti i manji laptopovi: sprečava da stavke navigacije preliju red pre nego što se navbar sklopi u meni */
+@media (min-width: 992px) and (max-width: 1150px) {
+  .nav-item {
+    margin: 0 14px;
+  }
+}
 
 @media (max-width: 767px) {
   .nav-item {
@@ -664,5 +686,46 @@ footer.site-footer {
 
   .calendar-grid {
     max-width: 100%;
+  }
+
+  footer.site-footer {
+    text-align: center;
+  }
+}
+
+/* Manji telefoni i pametni satovi sa veb pregledačem */
+@media (max-width: 380px) {
+  .nav-item {
+    margin: 0 10px;
+  }
+
+  .hero {
+    padding: 1.75rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  .content-page .p-4 {
+    padding: 1rem !important;
+  }
+
+  .event-card-day {
+    font-size: 1.5rem;
+  }
+
+  .cal-cell {
+    font-size: 0.7rem;
+  }
+
+  .gallery-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
   }
 }
