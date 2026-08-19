@@ -48,6 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .kontakt {
   font-size: 18px;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .text-gold {
@@ -106,6 +108,10 @@ p {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: 1px;
+  white-space: normal;
+  line-height: 1.2;
+  font-size: 1.1rem;
+  max-width: calc(100% - 56px);
 }
 
 .navbar .navbar-toggler:focus {
@@ -114,8 +120,12 @@ p {
 }
 
 .navbar .navbar-toggler {
-  filter: invert(100%);
   border: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar .navbar-toggler:hover {
+  opacity: 0.85;
 }
 
 .navbar a {
@@ -657,8 +667,18 @@ footer.site-footer {
 }
 
 @media (max-width: 767px) {
+  .navbar-collapse {
+    padding: 0.5rem 0 1rem;
+  }
+
   .nav-item {
-    margin: 0 15px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item .nav-link {
+    padding: 0.6rem 15px;
   }
 
   #container {
